@@ -11,4 +11,4 @@ install:
 
 script:
   - "ansible-playbook -i tests/inventory tests/$SITE --syntax-check"
-  - "php -v"
+  - "/usr/local/zend/bin/zs-manage restart"
