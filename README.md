@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=master)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=develop)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)
+[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=master)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server) [![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=develop)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)
 
 # Zend Server
 
@@ -21,7 +21,7 @@ An example of how to use this role (also take a look at tests/test.yml):
 
     - hosts: servers
       roles:
-         - ansible-role-zend-server
+         - { role: HardieBoeve.zend-server, zs_web_server: 'nginx',  zs_php_version: '5.6' }
 
 ## License
 
