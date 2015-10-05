@@ -4,6 +4,7 @@ python: "2.7"
 
 env:
   - SITE=test.yml
+  - ANSIBLE_HOST_KEY_CHECKING=False
 
 install:
   - "pip install ansible"
@@ -11,5 +12,5 @@ install:
 
 script:
   - "ansible-playbook -i tests/inventory tests/$SITE --syntax-check"
-  - "ansible-playbook -i tests/inventory tests/$SITE"
+  - "ansible-playbook -i tests/inventory tests/$SITE --connection=local"
   - "/usr/local/zend/bin/zs-manage restart"
