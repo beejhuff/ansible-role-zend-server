@@ -1,0 +1,12 @@
+---
+- name: Ensure Zend signing key is present
+  apt_key: url=http://repos.zend.com/zend.key state=present
+
+- name: Ensure Zend repository is present
+  copy: src=zend-server.list dest=/etc/apt/sources.list.d/zend-server.list owner=root group=root
+
+- include: apache.yml
+  when: zs_web_server == "apache"
+
+- include: nginx.yml
+  when: zs_web_server == "nginx"

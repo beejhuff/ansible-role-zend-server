@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Hardie Boeve
+  description: Role for installing Zend Server
+  company: Boeve Web Development
+  license: license BSD-3-Clause
+  min_ansible_version: 1.8
+  platforms:
+  - name: Ubuntu
+  versions:
+  - trusty
+  - utopic
+  - vivid
+  categories:
+  - cloud
+  - development
+  - monitoring
+  - web
+dependencies: []
