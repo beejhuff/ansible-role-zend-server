@@ -5,12 +5,10 @@ python: "2.7"
 env:
   - SITE=test.yml
 
-before_install:
-  - sudo apt-get update -qq
-
 install:
-  - pip install ansible
+  - "pip install ansible"
   - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
 
 script:
   - "ansible-playbook -i tests/inventory tests/$SITE --syntax-check"
+  - "php -v"
