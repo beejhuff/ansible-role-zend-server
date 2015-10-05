@@ -7,10 +7,10 @@ galaxy_info:
   min_ansible_version: 1.8
   platforms:
   - name: Ubuntu
-  versions:
-  - trusty
-  - utopic
-  - vivid
+    versions:
+    - trusty
+    - utopic
+    - vivid
   categories:
   - cloud
   - development
