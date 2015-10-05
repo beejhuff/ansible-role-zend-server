@@ -1,42 +1,28 @@
-[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=master)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)
+[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=master)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=develop)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)
 
-[![Build Status](https://travis-ci.org/boeve-web-development/ansible-role-zend-server.svg?branch=develop)](https://travis-ci.org/boeve-web-development/ansible-role-zend-server)
+# Zend Server
 
-Role Name
-=========
+This role manages the installation of Zend Server with an Apache or Nginx web server.
 
-A brief description of the role goes here.
+For now we only support servers running Ubuntu (>= 14.04), when you prefer others operating systems, you can open a pull request or open an issue.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+A server with an minimal install of Ubuntu server 14.04 and up.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- zs_web_server: nginx or apache, the default web server is nginx.
+- zs_php_version: 5.6 or 5.5, the default php version is 5.6.
 
-Dependencies
-------------
+## Example Playbook
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+An example of how to use this role (also take a look at tests/test.yml):
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - ansible-role-zend-server
 
-License
--------
+## License
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Included license file.
