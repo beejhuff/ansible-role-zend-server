@@ -15,5 +15,6 @@ galaxy_info:
   - cloud
   - development
   - monitoring
-  - web
+  - webserver
+  - php
 dependencies: []
