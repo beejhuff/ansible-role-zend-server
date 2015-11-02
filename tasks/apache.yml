@@ -1,4 +1,4 @@
-- name: Ensure Zend Server is installed
+- name: Ensure Zend Server is installed (apache)
   apt:
     name: zend-server-php-{{ zs_php_version }}
     state: latest
