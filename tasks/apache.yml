@@ -3,3 +3,4 @@
     name: zend-server-php-{{ zs_php_version }}
     state: latest
     update_cache: yes
+  notify: zend-server start

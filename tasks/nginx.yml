@@ -5,8 +5,9 @@
 - name: Ensure Nginx repository is present
   template: src=nginx.list.j2 dest=/etc/apt/sources.list.d/nginx.list owner=root group=root
 
-- name: Ensure Zend Server is installed
+- name: Ensure Zend Server is installed (nginx)
   apt:
     name: "zend-server-nginx-php-{{ zs_php_version }}"
     state: latest
     update_cache: yes
+  notify: zend-server start

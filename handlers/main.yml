@@ -1,2 +1,9 @@
 ---
-# handlers file for ansible-role-zend-server
+- name: zend-server start
+  service: name=zend-server state=started
+
+- name: zend-server stop
+  service: name=zend-server state=stopped
+
+- name: zend-server restart
+  service: name=zend-server state=restarted
